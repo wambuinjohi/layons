@@ -32,7 +32,7 @@ export function EmailLoginConfigGuide() {
 
   const adminCredentials = {
     email: 'info@construction.com',
-    password: 'Medplus#2025!'
+    password: 'Layons@2025'
   };
 
   return (

@@ -197,13 +197,13 @@ export default function SupabaseTest() {
             <div>
               <span className="font-medium">URL:</span>
               <div className="font-mono text-muted-foreground">
-                https://mfhcbgnkxpifbhrtmgbv.supabase.co
+                https://eubrvlzkvzevidivsfha.supabase.co
               </div>
             </div>
             <div>
               <span className="font-medium">Project:</span>
               <div className="font-mono text-muted-foreground">
-                mfhcbgnkxpifbhrtmgbv
+                eubrvlzkvzevidivsfha
               </div>
             </div>
           </div>

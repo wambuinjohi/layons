@@ -6,8 +6,8 @@
 const { createClient } = require('@supabase/supabase-js');
 
 // Use the same credentials as the application
-const SUPABASE_URL = "https://klifzjcfnlaxminytmyh.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsaWZ6amNmbmxheG1pbnl0bXloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU2ODg5NzcsImV4cCI6MjA3MTI2NDk3N30.kY9eVUh2hKZvOgixYTwggsznN4gD1ktNX4phXQ5TTdU";
+const SUPABASE_URL = "https://eubrvlzkvzevidivsfha.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV1YnJ2bHprdnpldmlkaXZzZmhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA4NTgsImV4cCI6MjA3MzYzNjg1OH0.ni7Ogq-dKLvnCDzi8KvUVG2c1P7s0qY4xdF4AuvKwKk";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 

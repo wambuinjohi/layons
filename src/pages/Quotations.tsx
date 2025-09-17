@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -30,6 +30,7 @@ import { CreateQuotationModal } from '@/components/quotations/CreateQuotationMod
 import { ViewQuotationModal } from '@/components/quotations/ViewQuotationModal';
 import { EditQuotationModal } from '@/components/quotations/EditQuotationModal';
 import { downloadQuotationPDF } from '@/utils/pdfGenerator';
+import { useLocation } from 'react-router-dom';
 
 interface Quotation {
   id: string;
@@ -82,6 +83,13 @@ export default function Quotations() {
   const { data: companies } = useCompanies();
   const currentCompany = companies?.[0];
   const { data: quotations, isLoading, error, refetch } = useQuotations(currentCompany?.id);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.endsWith('/new')) {
+      setShowCreateModal(true);
+    }
+  }, [location.pathname]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-KE', {

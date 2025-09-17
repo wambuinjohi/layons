@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -49,6 +49,7 @@ import { RecordPaymentModal } from '@/components/payments/RecordPaymentModal';
 import { CreateDeliveryNoteModal } from '@/components/delivery/CreateDeliveryNoteModal';
 import { downloadInvoicePDF } from '@/utils/pdfGenerator';
 import { supabase } from '@/integrations/supabase/client';
+import { useLocation } from 'react-router-dom';
 
 interface Invoice {
   id: string;
@@ -105,6 +106,13 @@ export default function Invoices() {
   
   // Use the fixed invoices hook
   const { data: invoices, isLoading, error, refetch } = useInvoices(currentCompany?.id);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.endsWith('/new')) {
+      setShowCreateModal(true);
+    }
+  }, [location.pathname]);
 
   // Filter and search logic
   const filteredInvoices = invoices?.filter(invoice => {

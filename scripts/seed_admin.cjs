@@ -7,7 +7,7 @@ const { Client } = require('pg');
     process.exit(1);
   }
   const email = 'info@construction.com';
-  const password = 'Medplus#2025!';
+  const password = 'Layons@2025';
   const client = new Client({ connectionString, ssl: { rejectUnauthorized: false } });
   await client.connect();
   try {

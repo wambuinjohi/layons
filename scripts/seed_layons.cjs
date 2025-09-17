@@ -1,7 +1,5 @@
 const { Client } = require('pg');
 
-const { Client } = require('pg');
-
 (async () => {
   const connectionString = process.env.DATABASE_URL || process.env.MIGRATE_DATABASE_URL;
   if (!connectionString) {
